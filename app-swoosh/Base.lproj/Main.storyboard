@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,17 +19,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-Xq-zbc">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="corpus edimus, corpus edimus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-cF-Rjg">
-                                <rect key="frame" x="21.333333333333371" y="350.66666666666669" width="350.33333333333326" height="32.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="corpus edimus, corpus edimus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-cF-Rjg">
+                                <rect key="frame" x="21" y="351" width="350" height="65.333333333333314"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.35309278350515461" green="0.1789901842871324" blue="0.31676931106066025" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chwitin zwin ghzal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P25-ex-1H0">
                                 <rect key="frame" x="34" y="213" width="325" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="325" id="kig-LB-a5W"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="39"/>
                                 <color key="textColor" red="0.19482687249469083" green="0.32047342704459852" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -45,12 +42,15 @@
                                     <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
                                     <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7a7-GO-grS" kind="presentation" modalPresentationStyle="fullScreen" id="Xx9-tj-Adc"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Gzv-4Q-dTO">
-                                <rect key="frame" x="0.0" y="99" width="393" height="20"/>
+                                <rect key="frame" x="137" y="99" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ana w ghzali yaa lala" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAo-nF-1H1">
-                                <rect key="frame" x="72" y="264" width="249" height="35.666666666666686"/>
+                                <rect key="frame" x="72" y="281" width="249" height="35.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
                                 <color key="textColor" red="0.14466043052275518" green="0.19787809954154256" blue="0.33122583762886593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -61,26 +61,29 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="wmD-Xq-zbc" secondAttribute="bottom" id="4Lg-pr-by9"/>
                             <constraint firstItem="wmD-Xq-zbc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4an-8E-JOe"/>
-                            <constraint firstItem="yAo-nF-1H1" firstAttribute="top" secondItem="P25-ex-1H0" secondAttribute="bottom" id="90E-94-GBY"/>
-                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="9E8-ZS-tth"/>
-                            <constraint firstItem="yAo-nF-1H1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZT-hQ-qyS"/>
+                            <constraint firstItem="wmD-Xq-zbc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="83d-Jb-qTL"/>
+                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="85f-rd-qb1"/>
+                            <constraint firstAttribute="bottom" secondItem="wmD-Xq-zbc" secondAttribute="bottom" id="ASk-dS-y24"/>
                             <constraint firstItem="wmD-Xq-zbc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Duf-p3-5va"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gzv-4Q-dTO" secondAttribute="trailing" id="FD5-eR-lkP"/>
-                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GQZ-FB-nPa"/>
-                            <constraint firstItem="P25-ex-1H0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ifk-J3-Ab9"/>
-                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jxj-Cb-O7X"/>
+                            <constraint firstItem="uzg-cF-Rjg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="Ek7-Z4-1KR"/>
+                            <constraint firstItem="P25-ex-1H0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="J6B-2y-w9R"/>
+                            <constraint firstItem="yAo-nF-1H1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="L1e-RX-rCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uzg-cF-Rjg" secondAttribute="trailing" constant="22" id="Pxc-kZ-QJW"/>
+                            <constraint firstItem="uzg-cF-Rjg" firstAttribute="top" secondItem="yAo-nF-1H1" secondAttribute="bottom" constant="34.329999999999998" id="Q9c-bs-oP7"/>
+                            <constraint firstItem="P25-ex-1H0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R0Q-SN-Pbz"/>
                             <constraint firstItem="u3e-wp-09J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="TTB-sy-Bg2"/>
-                            <constraint firstItem="yAo-nF-1H1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U20-dk-Eyc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3e-wp-09J" secondAttribute="trailing" constant="56" id="V3U-IC-Ew1"/>
-                            <constraint firstItem="uzg-cF-Rjg" firstAttribute="width" secondItem="yAo-nF-1H1" secondAttribute="width" multiplier="1.40696" id="X1P-5e-Bao"/>
-                            <constraint firstItem="P25-ex-1H0" firstAttribute="top" secondItem="Gzv-4Q-dTO" secondAttribute="bottom" constant="94" id="Zj6-w7-lt4"/>
+                            <constraint firstItem="wmD-Xq-zbc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VHG-UF-Jc3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gzv-4Q-dTO" secondAttribute="trailing" constant="137" id="WVM-iC-fSL"/>
+                            <constraint firstItem="yAo-nF-1H1" firstAttribute="top" secondItem="P25-ex-1H0" secondAttribute="bottom" constant="17" id="e95-m8-c2a"/>
                             <constraint firstItem="u3e-wp-09J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="g4x-Kl-DZS"/>
-                            <constraint firstItem="yAo-nF-1H1" firstAttribute="width" secondItem="P25-ex-1H0" secondAttribute="width" multiplier="0.766154" id="gwF-gf-U7e"/>
-                            <constraint firstItem="uzg-cF-Rjg" firstAttribute="top" secondItem="yAo-nF-1H1" secondAttribute="bottom" constant="51.329999999999998" id="lln-of-yry"/>
-                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="oHt-Sc-3Lr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P25-ex-1H0" secondAttribute="trailing" constant="34" id="guy-tZ-1VI"/>
                             <constraint firstItem="wmD-Xq-zbc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pLV-wt-YXr"/>
-                            <constraint firstItem="uzg-cF-Rjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xNe-dP-42U"/>
-                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yiu-sD-Tjf"/>
+                            <constraint firstItem="Gzv-4Q-dTO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="q2u-cd-Pun"/>
+                            <constraint firstItem="wmD-Xq-zbc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qfl-Ub-H2g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAo-nF-1H1" secondAttribute="trailing" constant="72" id="rni-in-SZv"/>
+                            <constraint firstItem="P25-ex-1H0" firstAttribute="top" secondItem="Gzv-4Q-dTO" secondAttribute="bottom" constant="94" id="vYd-E9-iaj"/>
+                            <constraint firstItem="yAo-nF-1H1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wrm-fk-cet"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,12 +92,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="-74" y="-35"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="c9p-WA-Gwy">
             <objects>
-                <viewController id="7a7-GO-grS" sceneMemberID="viewController">
+                <viewController id="7a7-GO-grS" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s36-Gk-Xvt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +174,21 @@
                                     <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
                                     <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="7a7-GO-grS" eventType="touchUpInside" id="wW9-Kx-Xmv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br1-ad-pNu">
+                                <rect key="frame" x="0.0" y="30" width="61" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="GtE-ZQ-Vpc"/>
+                                    <constraint firstAttribute="width" constant="61" id="vud-rq-9Cf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backbutton" title=""/>
+                                <connections>
+                                    <segue destination="bKh-EA-3s0" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="5fS-dH-xxA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vLx-Bl-UaF"/>
@@ -183,7 +201,9 @@
                             <constraint firstItem="ZKw-gk-umd" firstAttribute="top" secondItem="s36-Gk-Xvt" secondAttribute="top" id="FBA-ku-9aO"/>
                             <constraint firstItem="vLx-Bl-UaF" firstAttribute="trailing" secondItem="ftM-uU-5k1" secondAttribute="trailing" constant="20" id="KLi-Se-Kci"/>
                             <constraint firstItem="JmD-GY-Qbj" firstAttribute="leading" secondItem="vLx-Bl-UaF" secondAttribute="leading" id="LpR-5c-LVS"/>
+                            <constraint firstItem="br1-ad-pNu" firstAttribute="leading" secondItem="vLx-Bl-UaF" secondAttribute="leading" id="S5q-PP-uNO"/>
                             <constraint firstItem="E1Q-Nc-cd5" firstAttribute="leading" secondItem="vLx-Bl-UaF" secondAttribute="leading" constant="56" id="TIY-mZ-KG6"/>
+                            <constraint firstItem="br1-ad-pNu" firstAttribute="top" secondItem="s36-Gk-Xvt" secondAttribute="top" constant="30" id="Wcc-yh-4J2"/>
                             <constraint firstItem="vLx-Bl-UaF" firstAttribute="trailing" secondItem="E1Q-Nc-cd5" secondAttribute="trailing" constant="56" id="ZIb-QT-Xd7"/>
                             <constraint firstItem="JmD-GY-Qbj" firstAttribute="top" secondItem="vLx-Bl-UaF" secondAttribute="top" constant="40" id="qUA-Pc-9ju"/>
                             <constraint firstItem="ZKw-gk-umd" firstAttribute="leading" secondItem="vLx-Bl-UaF" secondAttribute="leading" id="sFi-XZ-D7r"/>
@@ -191,15 +211,20 @@
                             <constraint firstItem="E1Q-Nc-cd5" firstAttribute="bottom" secondItem="vLx-Bl-UaF" secondAttribute="bottom" constant="14" id="yUQ-qL-QRh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a5h-6d-Pmx"/>
+                    <connections>
+                        <segue destination="pdE-OH-2Jm" kind="presentation" identifier="skillVCSegue" modalPresentationStyle="fullScreen" id="Xco-8N-o0S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS5-JI-fDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bKh-EA-3s0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="712.2137404580152" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Im5-Wa-toi">
             <objects>
-                <viewController id="pdE-OH-2Jm" sceneMemberID="viewController">
+                <viewController id="pdE-OH-2Jm" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYg-I2-Z2O">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +242,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'am a :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ0-fM-q4f">
-                                        <rect key="frame" x="154.66666666666663" y="72" width="83.666666666666686" height="32.666666666666657"/>
+                                        <rect key="frame" x="154.66666666666666" y="72" width="83.666666666666657" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <color key="textColor" red="0.35309278350000001" green="0.17899018429999999" blue="0.31676931110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -247,7 +272,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="BEGINER">
-                                            <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
+                                            <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="18"/>
                                             <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                     </button>
@@ -259,7 +284,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="EXPERT">
-                                            <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
+                                            <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="18"/>
                                             <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                     </button>
@@ -284,13 +309,15 @@
                             <constraint firstItem="wlK-6q-wPR" firstAttribute="trailing" secondItem="btd-KC-QxX" secondAttribute="trailing" id="klp-3w-dW7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ntq-1t-x9L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgY-EW-pPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383.9694656488548" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1529" y="-35"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backbutton" width="66.666664123535156" height="66.666664123535156"/>
         <image name="background" width="225" height="400"/>
         <image name="background1" width="721.66668701171875" height="1283.3333740234375"/>
         <image name="swooshLogo" width="119" height="20"/>

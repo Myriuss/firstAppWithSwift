@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
 
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var bgImg: UIImageView!
@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         //taille que la view dans n'importe quel device
         //logoImg.frame = CGRect(x: view.frame.size.width / 2 - logoImg.frame.size.width / 2, y: 50, width: logoImg.frame.size.width , height: logoImg.frame.size.height)
         //bgImg.frame = view.frame
+        
+    }
+    
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue){
         
     }
 }
