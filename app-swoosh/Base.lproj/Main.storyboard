@@ -136,6 +136,9 @@
                                             <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="7a7-GO-grS" eventType="touchUpInside" id="oOf-8i-DOc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoL-9D-qer" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90.000000000000028" width="353" height="56"/>
@@ -148,6 +151,9 @@
                                             <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="7a7-GO-grS" eventType="touchUpInside" id="iZy-cl-xTZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwk-sz-5mL" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="180.00000000000003" width="353" height="56"/>
@@ -160,10 +166,13 @@
                                             <fontDescription key="titleFontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.1948268725" green="0.32047342699999998" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onOthersTapped:" destination="7a7-GO-grS" eventType="touchUpInside" id="1rh-7I-yqo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Q-Nc-cd5" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Q-Nc-cd5" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="56" y="776" width="281" height="56"/>
                                 <color key="backgroundColor" red="0.35309278350000001" green="0.17899018429999999" blue="0.31676931110000001" alpha="0.38095238100000001" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -213,6 +222,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="a5h-6d-Pmx"/>
                     <connections>
+                        <outlet property="nextBtn" destination="E1Q-Nc-cd5" id="c4n-iw-CJ1"/>
                         <segue destination="pdE-OH-2Jm" kind="presentation" identifier="skillVCSegue" modalPresentationStyle="fullScreen" id="Xco-8N-o0S"/>
                     </connections>
                 </viewController>
